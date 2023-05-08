@@ -1,0 +1,21 @@
+/* stylelint-disable at-rule-no-unknown */
+@use "../abstracts" as abs;
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+body {
+    font-family: abs.$font;
+    font-size: abs.$reg-size;
+    color: var(--font-primary-color);
+}

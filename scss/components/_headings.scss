@@ -1,0 +1,19 @@
+/* stylelint-disable at-rule-no-unknown */
+@use "../abstracts/index" as abs;
+
+.heading {
+    color: var(--font-primary-color);
+    font-size: abs.$lg-size;
+
+    &-bold {
+        font-weight: bold;
+    }
+
+    &-med {
+        font-weight: 500;
+    }
+
+    &--med-size {
+        font-size: abs.$md-size;
+    }
+}

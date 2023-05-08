@@ -1,0 +1,129 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable at-rule-no-unknown */
+@use "../abstracts" as abs;
+
+.button {
+    padding: 10px 20px;
+    border-radius: 3px;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 9px 17px rgb(40 73 199 / 32%);
+    }
+
+    @include abs.transition-35-inout;
+
+    &[disabled],
+    &:disabled {
+        color: var(--border-color) !important;
+        border-color: var(--border-color) !important;
+        background: transparent !important;
+        cursor: not-allowed;
+    }
+
+    &--blue {
+        background: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: #fff;
+
+        &:hover {
+            background: var(--primary-hover-color);
+        }
+    }
+
+    &--white {
+        background: #fff;
+        color: var(--second-border-color);
+        border: 1px solid  var(--second-border-color);
+    }
+
+    &--primary {
+        background: #0d6efd;
+        color: #fff;
+        border: #0d6efd;
+    }
+
+    &--secondary {
+        background: #6c757d;
+        color: #fff;
+        border: #6c757d;
+    }
+
+    &--success {
+        background: #198754;
+        color: #fff;
+        border: #198754;
+    }
+
+    &--danger {
+        background: #dc3545;
+        color: #fff;
+        border: #dc3545;
+    }
+
+    &--warning {
+        background: #ffc107;
+        color: #000;
+        border: #ffc107;
+    }
+
+    &--info {
+        background: #0dcaf0;
+        color: #000;
+        border: #0dcaf0;
+    }
+
+    &--light {
+        background: #f8f9fa;
+        color: #000;
+        border: #f8f9fa;
+    }
+
+    &--dark {
+        background: #212529;
+        color: #fff;
+        border: #212529;
+    }
+
+    &--transparent {
+        background: transparent;
+        color: var(--font-primary-color);
+        border: transparent;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+    }
+
+    &--collapse {
+        position: absolute;
+        right: 1.5rem;
+        bottom: 0;
+        padding: 8px 20px;
+        border-radius: 25px 25px 0 0;
+
+        &:hover {
+            background: var(--primary-hover-color);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 35px 35px 0 0;
+        }
+
+        img {
+            width: 15px;
+        }
+
+        &.collapsed {
+            top: 100%;
+            bottom: auto;
+            border-radius: 0 0 35px 35px;
+
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

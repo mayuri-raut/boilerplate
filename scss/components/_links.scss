@@ -1,0 +1,22 @@
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable selector-class-pattern */
+@use "../abstracts" as abs;
+
+.link {
+    color: var(--font-primary-color);
+
+    @include abs.transition-35-inout;
+
+    &:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+
+    &--colored {
+        color: var(--primary-color);
+    }
+
+    &--underlined {
+        text-decoration: underline;
+    }
+}
